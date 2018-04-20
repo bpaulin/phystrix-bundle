@@ -1,4 +1,17 @@
-<phpunit bootstrap = "./vendor/autoload.php" >
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="./vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         forceCoversAnnotation="false"
+         mapTestClassNameToCoveredClassName="false"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false">
     <testsuites>
         <testsuite name="OdeskPhystrixBundle Test Suite">
             <directory>./Tests</directory>
@@ -11,6 +24,7 @@
             <exclude>
                 <directory>./Resources</directory>
                 <directory>./Tests</directory>
+                <directory>./vendor</directory>
             </exclude>
         </whitelist>
     </filter>
